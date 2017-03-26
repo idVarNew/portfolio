@@ -1,0 +1,13 @@
+.about-text {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    padding: 19px 0;
+    @include media(minM) {
+        width: 70%;
+        padding: 0 0 0 10px;
+    }
+
+    .animation {
+        color: #f35a3d;
+    }
+}

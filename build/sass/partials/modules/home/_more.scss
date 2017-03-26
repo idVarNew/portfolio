@@ -1,0 +1,82 @@
+.next {
+    position: relative;
+
+    &-link {
+        height: 40px;
+        text-align: center;
+        width: 50px;
+        animation-name: animationNext;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in;
+        border: none;
+        background-color: transparent;
+        display: block;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        margin-left: -35px;
+
+        span {
+            pointer-events: none;
+        }
+
+        &.bright {
+            &:hover {
+                transition: all 1s;
+                background-color: transparent;
+            }
+        }
+    }
+
+    &:hover {
+        opacity: 0.5;
+    }
+
+    &-button {}
+
+    .down {
+        padding: 5px;
+        border: solid #fff;
+        animation-name: animateNext;
+        animation-duration: 3s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        position: absolute;
+        border-width: 0 5px 5px 0;
+        display: inline-block;
+        transform: rotate(45.5deg);
+        -webkit-transform: rotate(45.5deg);
+        z-index: 100;
+    }
+}
+@keyframes animateNext {
+    0% {
+        margin-top: 5px;
+    }
+
+    50% {
+        margin-top: 18px;
+    }
+
+    100% {
+        margin-top: 5px;
+    }
+}
+@keyframes animationNext {
+    0% {
+        bottom: 1000px;
+        opacity: 0;
+        font-weight: 500;
+    }
+
+    80% {
+        font-size: 108px;
+    }
+
+    100% {
+        bottom: 0;
+        opacity: 1;
+        font-weight: 800;
+    }
+}

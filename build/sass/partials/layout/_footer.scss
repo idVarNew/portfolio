@@ -1,0 +1,14 @@
+.main-footer {
+    position: absolute;
+    background-color: transparent;
+    bottom: 0;
+    z-index: 1000;
+    padding: 28px;
+    @include media(minS) {
+        padding: 48px;
+    }
+    width: 100%;
+    font-size: 1.0rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

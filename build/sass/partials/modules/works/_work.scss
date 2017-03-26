@@ -1,0 +1,168 @@
+.work {
+    width: 90%;
+    margin: 0 auto 70px;
+    position: relative;
+    overflow: hidden;
+    line-height: 0;
+    @include media(minS) {
+        margin: 0 auto 70px;
+        line-height: normal;
+    }
+    @include media(minL) {
+        width: 63%;
+    }
+    @include media(minXL) {
+        width: 68%;
+    }
+
+    &-image {
+        @include media(minS) {
+            &-left {
+                float: left;
+            }
+
+            &-right {
+                float: right;
+            }
+        }
+    }
+
+    &-description {
+        bottom: 0;
+        background-color: #fff;
+        padding: 20px 10px;
+        line-height: 1.5;
+        @include media(minS) {
+            position: absolute;
+            width: 50%;
+            padding: 20px;
+            line-height: normal;
+        }
+        @include media(minM) {
+            padding: 25px;
+        }
+        @include media(minL) {
+            padding: 40px;
+        }
+
+        &-left {
+            left: 0;
+        }
+
+        &-right {
+            right: 0;
+        }
+
+        p {
+            font-size: 1.7rem;
+            @include media(minS) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &-short-info {
+        padding-bottom: 10px;
+    }
+
+    &-title {
+        font-size: 2.5rem;
+        padding: 0 0 15px;
+        @include media(minM) {
+            font-size: 3.5rem;
+            padding: 0 0 15px;
+        }
+        @include media(minL) {
+            font-size: 2.5rem;
+        }
+        @include media(minXL) {
+            font-size: 3.5rem;
+        }
+    }
+
+    &-project {
+        &::after {
+            content: "";
+            display: inline-block;
+            background-color: #000;
+            width: 70px;
+            height: 2px;
+            margin: 7px 10px;
+        }
+    }
+
+    &-type {
+        font-size: 2.5rem;
+    }
+
+    &-link {
+        z-index: 100;
+        position: relative;
+        margin-top: 20px;
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        padding-right: 25px;
+
+        &:hover {
+            &::before {
+                transition: all 0.5s;
+                content: "";
+                display: inline-block;
+                background-color: #f35a3d;
+                width: 10px;
+                height: 10px;
+                margin-right: 10px;
+                border-radius: 100%;
+            }
+        }
+
+        &::before {
+            transition: all 0.5s;
+            content: "";
+            display: inline-block;
+            background-color: #000;
+            width: 10px;
+            height: 10px;
+            margin-right: 10px;
+        }
+    }
+
+    &-1 {
+        @include media(minM) {
+            animation-name: work1;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    &-2 {
+        @include media(minM) {
+            animation-name: work2;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+@keyframes work2 {
+    0% {
+        background-color: #f35a3d;
+    }
+
+    100% {
+        background-color: #fff;
+    }
+}
+@keyframes work1 {
+    0% {
+        background-color: #fff;
+    }
+
+    100% {
+        background-color: #e8c72f;
+    }
+}

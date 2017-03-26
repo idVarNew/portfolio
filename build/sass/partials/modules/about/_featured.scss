@@ -1,0 +1,58 @@
+.featured {
+    &-info {
+        padding: 45px 5px 25px;
+        overflow: hidden;
+        text-align: center;
+        @include media(minM) {
+            padding: 20px 0 5px;
+        }
+    }
+
+    &-text {
+        @include media(minM) {
+            padding-left: 0;
+        }
+    }
+
+    &-animation {
+        animation-name: animateFeaturedIconMobile;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        display: block;
+        transform: rotate(90deg) translate(-20px);
+        font-weight: bold;
+        @include media(minM) {
+            animation-name: animateFeaturedIcon;
+            position: absolute;
+            transform: rotate(0deg);
+        }
+    }
+}
+@keyframes animateFeaturedIcon {
+    0% {
+        padding-left: 5px;
+    }
+
+    50% {
+        padding-left: 18px;
+    }
+
+    100% {
+        padding-left: 5px;
+    }
+}
+@keyframes animateFeaturedIconMobile {
+    0% {
+        padding-left: 0;
+    }
+
+    50% {
+        padding-left: 15px;
+    }
+
+    100% {
+        padding-left: 0;
+    }
+}
