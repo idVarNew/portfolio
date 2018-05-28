@@ -1,2 +1,2 @@
 # portfolio
-This is my portfolio website: http://frontendowiec.com.
+This was my portfolio website: http://frontendowiec.com/prevportfolio/
