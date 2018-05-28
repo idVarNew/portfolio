@@ -1,9 +1,4 @@
-@import "normalize";
-@import "variables";
-@import "mixins";
-@import "fonts";
-@import "buttons";
-@import "loading";
+/* przeznaczony na podstawowe style */
 html {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -17,14 +12,16 @@ html {
 
 body {
     font-size: 1.5rem;
-    @include media(minM) {
-        font-size: 1.3rem;
-    }
-    line-height: 1.8;
-    background-color: $colorb2;
+    line-height: 1.4;
+    background-color: #fff;
     height: 100%;
     color: #222;
     font-family: Raleway;
+}
+
+::-moz-selection {
+    background: #d8eccd;
+    text-shadow: none;
 }
 
 ::selection {
@@ -32,45 +29,22 @@ body {
     text-shadow: none;
 }
 
-::-webkit-input-placeholder {
-    color: $colorb2;
-    font-family: Raleway;
-    font-weight: 300;
-}
-
-:-moz-placeholder {
-    color: $colorb2;
-    font-family: Raleway;
-    font-weight: 300;
-}
-
-::-moz-placeholder {
-    color: $colorb2;
-    font-family: Raleway;
-    font-weight: 300;
-}
-
-:-ms-input-placeholder {
-    color: $colorb2;
-    font-family: Raleway;
-    font-weight: 300;
-}
-
 a {
     text-decoration: none;
     color: #222;
     font-weight: bold;
+
     &:hover {
         color: #555;
     }
+
     &:active {
-        color: $colorn1;
+        color: #ddd;
     }
 }
 
 ul {
     margin-bottom: 0;
-    padding-left: 0;
     list-style: none;
 }
 

@@ -1,127 +1,32 @@
 @mixin media($media) {
-    @if $media==minXS {
+     @if $media == minXS{
         @media only screen and (min-width: $break-300) {
+             @content;
+        }
+    }
+    @if $media == minS {
+         @media only screen and (min-width: $break-500){
             @content;
         }
     }
-    @if $media==minS {
-        @media only screen and (min-width: $break-500) {
+    @else if $media == minM {
+         @media only screen and (min-width: $break-800 ){
             @content;
         }
     }
-    @else if $media==maxM {
-        @media only screen and (max-width: $break-800) {
+    @else if $media == minL {
+         @media only screen and (min-width: $break-1200){
             @content;
         }
     }
-    @else if $media==minM {
-        @media only screen and (min-width: $break-800) {
+    @else if $media == minXL {
+         @media only screen and (min-width: $break-1580){
             @content;
         }
     }
-    @else if $media==minL {
-        @media only screen and (min-width: $break-1200) {
+    @else if $media == minXXL {
+         @media only screen and (min-width: $break-2400){
             @content;
         }
-    }
-    @else if $media==minXL {
-        @media only screen and (min-width: $break-1580) {
-            @content;
-        }
-    }
-    @else if $media==minXXL {
-        @media only screen and (min-width: $break-1900) {
-            @content;
-        }
-    }
-    @else if $media==minXXXL {
-        @media only screen and (min-width: $break-2100) {
-            @content;
-        }
-    }
-}
-
-@mixin clearfix() {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-@mixin formatText($fontSize, $fontWeight, $textTrans, $letterSpac) {
-    font-size: $fontSize;
-    font-weight: $fontWeight;
-    text-transform: $textTrans;
-    letter-spacing: $letterSpac +px;
-}
-
-@mixin pseudoLine($wid, $hei, $color, $dis) {
-    content: "";
-    position: absolute;
-    width: $wid;
-    height: $hei + px;
-    background-color: $color;
-    display: $dis
-}
-
-@mixin pseudoLine($wid, $hei, $color, $dis) {
-    content: "";
-    position: absolute;
-    width: $wid;
-    height: $hei + px;
-    background-color: $color;
-    display: $dis
-}
-
-@mixin centerElement() {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%);
-}
-
-@mixin paginationPosition ($padding, $symbol) {
-    .slider-pagination {
-        padding-bottom: $padding + px;
-    }
-    .tns-nav-active {
-        &:last-child {
-            &::after {
-                content: $symbol;
-                position: absolute;
-                background-color: $colorb2;
-                transform: translate(-3px, -10px);
-            }
-        }
-    }
-}
-
-@mixin animateHeight ($first, $last) {
-    0% {
-        height: $first;
-    }
-    100% {
-        height: $last
-    }
-}
-@mixin animateHorizontal ($first, $middle, $last) {
-    0% {
-        transform: translateX($first)
-    }
-    50% {
-        transform: translateX($middle)
-    }
-    100% {
-        transform: translateX($last)
-    }
-}
-
-
-@mixin animateVisibility ($first, $last) {
-    0% {
-        opacity: $first;
-    }
-    100% {
-        opacity: $last;
     }
 }

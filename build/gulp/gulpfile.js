@@ -1,24 +1,24 @@
-var gulp = require("gulp");
+var gulp = require( "gulp" );
 
 //PLUGINS
-var autoprefixer = require("gulp-autoprefixer"),
-    concat = require("gulp-concat"),
-    rename = require("gulp-rename"),
-    uglify = require("gulp-uglify");
+var autoprefixer = require( "gulp-autoprefixer" ),
+    concat = require( "gulp-concat" ),
+    rename = require( "gulp-rename" ),
+    uglify = require( "gulp-uglify" );
 
 
 // autoprefixer
-gulp.task("ap", ap);
+gulp.task( "ap", ap );
 // concat rename uglify
-gulp.task("cru", cru);
+gulp.task( "cru", cru );
 // watch all
-gulp.task("watch", watch);
+gulp.task( "watch", watch );
 
 
 function ap() {
-    return gulp.src("../../assets/css/styles.css")
-        .pipe(autoprefixer())
-        .pipe(gulp.dest("../../assets/css"))
+    return gulp.src( "../../assets/css/styles.css" )
+        .pipe( autoprefixer() )
+        .pipe( gulp.dest( "../../assets/css" ) )
 }
 
 function cru() {
@@ -26,23 +26,15 @@ function cru() {
         js2 = "../js/main/*.js",
         jsDest = "../../assets/js";
 
-    return gulp.src([js1, js2])
-        .pipe(concat("scripts.js"))
-        .pipe(gulp.dest(jsDest))
-        .pipe(rename("scripts.min.js"))
-        .pipe(uglify())
-        .on('error', onError)
-        .pipe(gulp.dest(jsDest));
-      
-}
-
-function onError() {
-    console.log("Error");
-    this.emit('end');
+    return gulp.src( [ js1, js2 ] )
+        .pipe( concat( "scripts.js" ) )
+        .pipe( gulp.dest( jsDest ) )
+        .pipe( rename( "scripts.min.js" ) )
+        .pipe( uglify() )
+        .pipe( gulp.dest( jsDest ) );
 }
 
 function watch() {
-    gulp.watch("../js/main/*.js", ["cru", ]);
-    gulp.watch("../js/external/*.js", ["cru", ]);
-    gulp.watch("../../assets/css/styles.css", ["ap", ]);
+    gulp.watch( "../js/main/*.js", [ "cru", ] );
+    gulp.watch( "../../assets/css/styles.css", [ "ap", ] );
 }

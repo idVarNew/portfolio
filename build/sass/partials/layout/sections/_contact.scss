@@ -1,0 +1,100 @@
+.section-contact {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    clear: both;
+    display: block;
+    background-color: #f35a3d;
+    color: #fff;
+    background-color: transparent;
+    min-height: 500px;
+    @include media(minS) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    @include media(minM) {
+        background-repeat: no-repeat;
+        background-position: bottom right;
+    }
+}
+
+.contact {
+    &-content {
+        padding: 25px 25px 0;
+        width: 100%;
+        @include media(minS) {
+            min-width: 420px;
+            width: 25%;
+            padding: 50px 25px 10%;
+        }
+        @include media(minM) {
+            padding: 0;
+        }
+    }
+
+    &-text {
+        padding-bottom: 10px;
+
+        span {
+            display: block;
+            font-size: 5.0rem;
+            @include media(minS) {
+                display: inline;
+                padding-right: 10px;
+            }
+            @include media(minM) {
+                font-size: 8.0rem;
+            }
+        }
+    }
+
+    &-1 {
+        animation-name: contact2;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    &-2 {
+        animation-name: contact3;
+        @include media(minM) {
+            animation-name: contact1;
+        }
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        background-image: linear-gradient(135deg, transparent 0%,transparent 50%,#9fd545 50%,#7fd545 50%,#9fd545 100%);
+        background-position: 0 bottom;
+        background-repeat: no-repeat;
+        background-color: #4bd98d;
+    }
+}
+@keyframes contact2 {
+    0% {
+        background-color: #7fd545;
+    }
+
+    100% {
+        background-color: #9fd545;
+    }
+}
+@keyframes contact1 {
+    0% {
+        background-position: 100vw bottom;
+        background-color: #9fd545;
+    }
+
+    100% {
+        background-position: 5vw bottom;
+        background-color: #4bd98d;
+    }
+}
+@keyframes contact3 {
+    0% {
+        background-position: 50vw bottom;
+    }
+
+    100% {
+        background-position: 0 bottom;
+    }
+}

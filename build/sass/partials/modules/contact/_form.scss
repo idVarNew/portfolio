@@ -1,0 +1,176 @@
+.contact {
+    &-form {
+        position: relative;
+        z-index: 10000;
+
+        label {
+            opacity: 0;
+            font-size: 10px;
+            text-transform: uppercase;
+            -webkit-transform: translateY(-5px);
+            transform: translateY(-2px);
+            position: absolute;
+            letter-spacing: 0.5px;
+            font-weight: bold;
+        }
+
+        [type="email"],
+        [type="text"],
+        textarea {
+            width: 100%;
+            padding: 19px 5px;
+            border: 0;
+            margin-bottom: 12px;
+            background-color: transparent;
+            border-bottom: 1px solid #fff;
+            color: #fff;
+            font-family: Raleway;
+
+            &:focus {
+                border-bottom: 2px solid #fff;
+            }
+        }
+
+        textarea {
+            resize: none;
+
+            &:focus {
+                border-bottom: 2px solid #fff;
+            }
+        }
+
+        .invalid {
+            color: #a54848;
+            border-bottom: 2px solid #a54848;
+
+            &::-webkit-input-placeholder {
+                color: #a54848;
+            }
+
+            &:-moz-placeholder {
+                color: #a54848;
+            }
+
+            &::-moz-placeholder {
+                color: #a54848;
+            }
+
+            &:-ms-input-placeholder {
+                color: #a54848;
+            }
+        }
+
+        .valid {
+            border-bottom: 2px solid green;
+        }
+
+        .neutralize {
+            color: #fff;
+        }
+
+        &-alert {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        &-submit {
+            width: 100%;
+            padding: 19px 5px;
+            border: 0;
+            margin-bottom: 12px;
+            background-color: transparent;
+            border-bottom: 1px solid #fff;
+            color: #fff;
+            font-family: Raleway;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 1px;
+            padding: 0 0 19px;
+            @include media(minS) {
+                padding: 19px 5px;
+            }
+        }
+    }
+
+    &-error {
+        right: 0;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #a54848;
+        position: absolute;
+        margin-top: -10px;
+    }
+}
+
+.is-visible {
+    animation-name: zx;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus input:-webkit-autofill,
+input:-webkit-autofill:hover,
+select:-webkit-autofill,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:hover,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
+    -webkit-text-fill-color: #fff!important;
+    -webkit-box-shadow: 0 0 0 1000px transparent inset;
+    transition: background-color 5000s ease-in-out 0s;
+    color: #fff;
+}
+
+textarea::-webkit-scrollbar {
+    width: 10px;
+}
+
+textarea::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 1px #fff;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    outline: 1px solid #fff;
+}
+
+::-webkit-input-placeholder {
+    color: #fff;
+    font-family: Raleway;
+    font-weight: 300;
+}
+
+:-moz-placeholder {
+    color: #fff;
+    font-family: Raleway;
+    font-weight: 300;
+}
+
+::-moz-placeholder {
+    color: #fff;
+    font-family: Raleway;
+    font-weight: 300;
+}
+
+:-ms-input-placeholder {
+    color: #fff;
+    font-family: Raleway;
+    font-weight: 300;
+}
+
+textarea::-webkit-validation-bubble-message {
+    display: none;
+}
+@keyframes zx {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

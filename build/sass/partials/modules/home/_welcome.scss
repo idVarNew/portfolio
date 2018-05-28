@@ -1,0 +1,34 @@
+.welcome {
+    span {
+        display: inline;
+        @include media(minS) {
+            display: block;
+        }
+    }
+
+    &-title {
+        animation-name: animationnNext;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+        font-size: 4.5rem;
+        font-weight: 500;
+        @include media(minS) {
+            font-size: 5.5rem;
+        }
+    }
+
+    &-text {
+        font-size: 2.3rem;
+        font-weight: 300;
+        @include media(minS) {
+            font-size: 2.5rem;
+        }
+        @include media(minM) {
+            font-size: 3rem;
+        }
+        @include media(minL) {
+            font-size: 3.8rem;
+        }
+    }
+}

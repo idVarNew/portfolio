@@ -1,0 +1,24 @@
+.intro {
+    text-align: center;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    @include media(minS) {
+        height: 250px;
+    }
+    @include media(minM) {
+        height: 350px;
+    }
+
+    &-title {
+        font-size: 2.5rem;
+        @include media(minS) {
+            font-size: 3.5rem;
+        }
+        @include media(minM) {
+            font-size: 4.5rem;
+        }
+    }
+}

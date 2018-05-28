@@ -1,64 +1,14 @@
-.page {
-    &-footer {
-        display: flex;
-        @include media(maxM) {
-            border-top: 1px solid $colorn1;
-              padding: 25px 10px;
-            flex-direction: column;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            height: 20vh;
-            min-height: 130px;
-            @media (orientation: landscape) {
-                height: auto
-            }
-        }
-        @include media(minM) {
-            order: 1;
-        }
+.main-footer {
+    position: absolute;
+    background-color: transparent;
+    bottom: 0;
+    z-index: 1000;
+    padding: 28px;
+    @include media(minS) {
+        padding: 48px;
     }
-}
-
-.info {
-    filter: blur(0);
-    -webkit-filter: blur(0);
-    @include media(maxM) {
-        order: 2;
-        &-content {
-            padding-top: 25px;
-        }
-    }
-    @include media(minM) {
-        width: 50px;
-        display: flex;
-        border-right: 1px solid $colorn1;
-        padding-bottom: 285px;
-        &-content {
-            filter: blur(0);
-            -webkit-filter: blur(0);
-            transform: rotate(-90deg) translate(-110px, 20px);
-            white-space: nowrap;
-            display: block;
-            font-size: $font2;
-            transform-origin: left;
-            align-self: flex-end;
-        }
-    }
-    @include media(minL) {
-        width: 90px;
-        display: flex;
-        border-right: 1px solid $colorn1;
-        padding-bottom: 285px;
-        &-content {
-            filter: blur(0);
-            -webkit-filter: blur(0);
-            transform: rotate(-90deg) translate(-110px, 40px);
-            white-space: nowrap;
-            display: block;
-            font-size: $font2;
-            transform-origin: left;
-            align-self: flex-end;
-        }
-    }
+    width: 100%;
+    font-size: 1.0rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }

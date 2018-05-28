@@ -1,6 +1,10 @@
 @import "compass";
+@import "partials/base/normalize";
+@import "partials/base/variables";
+@import "partials/base/mixins";
+@import "partials/base/fonts";
 @import "partials/base/base";
 @import "partials/layout/layout";
+@import "partials/effects";
 @import "partials/modules/modules";
-
-
+/*! To jest komentarz głośny z wykrzyknikiem na początku */

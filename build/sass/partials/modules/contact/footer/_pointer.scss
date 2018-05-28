@@ -1,0 +1,25 @@
+.pointer {
+    position: absolute;
+    transform: rotate(90deg);
+    margin-top: -35px;
+    color: #fff;
+    animation-name: animatePointer;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    position: absolute;
+}
+@keyframes animatePointer {
+    0% {
+        margin-top: -55px;
+    }
+
+    50% {
+        margin-top: -40px;
+    }
+
+    100% {
+        margin-top: -55px;
+    }
+}
