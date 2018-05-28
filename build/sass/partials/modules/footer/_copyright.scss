@@ -1,0 +1,11 @@
+.copyright {
+    @include formatText(9px, 400, uppercase, 1.9);
+    color: $colorn3;
+    @include media(maxM) {
+        color: $colorn4;
+        background-color: $colorb2;
+        padding: 5px;
+        position: relative;
+        z-index: 10;
+    }
+}

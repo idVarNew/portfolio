@@ -1,0 +1,11 @@
+.home-page {
+    position: relative;
+    .page {
+        &-title {
+            font-size: 19px;
+            @include media(minM) {
+                transform: translateX(-50px); // margin-left: -50px;
+            }
+        }
+    }
+}

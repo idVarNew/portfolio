@@ -1,0 +1,49 @@
+.home-page {
+    .slide-8 {
+        &::after {
+            background-image: url(../img/home-slider/letters/d.png);
+            z-index: 5;
+            position: absolute;
+        }
+        &::before {
+            background-image: url(../img/home-slider/images/image-8.gif);
+            animation: animateSlideBackground3 7.5s both infinite;
+            width: 110%;
+            height: 110%;
+            left: -5%;
+            top: -5%;
+        }
+        .slide-img-1 {
+            width: 280px;
+            position: absolute;
+            right: 0;
+            transform: translate(150px, -390px);
+            transition: all 0.5s ease-out;
+        }
+        &.active {
+            .slide-img-1 {
+                transform: translate(25px, 25px);
+                transition: all 0.4s ease-out;
+                transition-delay: 1.5s;
+            }
+        }
+        &:hover {
+            .slide-img-1 {
+                transform: translate(35px, 15px);
+                transition: all 0.2s ease-out;
+            }
+        }
+    }
+}
+
+@keyframes animateSlideBackground3 {
+    0% {
+        transform: scale(1) rotate(0deg)
+    }
+    50% {
+        transform: scale(1.1) rotate(-5deg)
+    }
+    100% {
+        transform: scale(1) rotate(0deg)
+    }
+}

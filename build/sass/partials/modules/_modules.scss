@@ -1,22 +1,9 @@
-/* Home */
-@import "home/logo";
-@import "home/navigation";
-@import "home/email";
-@import "home/welcome";
-@import "home/words";
-@import "home/more";
-/* About*/
-@import "about/letter";
-@import "about/text";
-@import "about/accordion";
-@import "about/skills";
-@import "about/featured";
-/* Works*/
-@import "works/intro";
-@import "works/work";
-/* Works*/
-@import "contact/form";
-@import "contact/footer/links";
-@import "contact/footer/note";
-@import "contact/footer/pointer";
-@import "contact/footer/backToTop";
+@import "slider/slider";
+
+@import "blankSlide";
+@import "footer/copyright";
+@import "footer/icons";
+@import "header/nav/nav";
+@import "sidebar/mainSkills";
+@import "skills"
+

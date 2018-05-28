@@ -1,0 +1,41 @@
+.home-page {
+    .slide-1 {
+        // Base   --------------------------------------------------
+        &::after {
+            background-image: url(../img/home-slider/letters/f.png);
+        }
+        .slide-bg {
+            background-image: url(../img/home-slider/images/image-1.jpg);
+            width: 100%;
+            height: 100%;
+        }
+        .slide-img-1 {
+            width: 230px;
+            position: absolute;
+            right: 0;
+            transform: translate(250px, -390px);
+            transition: all 0.5s ease-out;
+        } 
+        &.start-0 {
+            .slide-img-1 {
+                transform: translate(50px, 25px);
+                transition: all 0.5s ease-out;
+                transition-delay: 3.5s;
+            }
+        } 
+        
+        &.active {
+            .slide-img-1 {
+                transform: translate(50px, 25px);
+                transition: all 0.5s ease-out;
+                transition-delay: 1.5s;
+            }
+        } 
+        &:hover {
+            .slide-img-1 {
+                transform: translate(40px, 15px);
+                transition: all 0.2s ease-out;
+            }
+        }
+    }
+}

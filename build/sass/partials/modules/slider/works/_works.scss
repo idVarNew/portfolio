@@ -1,0 +1,104 @@
+@import "slides";
+
+
+@include media(maxM) {
+    .works-page {
+        .slide {
+            font-size: $font5;
+            &::after {
+                @include clearfix();
+            }
+        }
+        .page-content {
+            height: auto;
+        }
+        .page-main {
+            height: auto;
+        }
+        .tns-slider {
+            display: flex;
+            align-items: stretch;
+            height: 100%;
+            transition: all 0s;
+            &>.tns-item {
+                flex: 1;
+                color: $colorb1;
+            }
+        }
+    }
+}
+
+.work {
+    p {
+        padding-bottom: 15px;
+        @include media(minM) {
+            padding-bottom: 10px;
+        }
+    }
+    &-tech {
+        @include formatText($font2, 500, none, 0.5);
+        margin-bottom: 45px;
+        @include media(minM) {
+            font-size: $font1;
+        }
+        li {
+            display: inline-block;
+            &::after {
+                content: " -";
+            }
+        }
+    }
+    &-title {
+        @include formatText($font8, 500, uppercase, 1.5);
+        padding-bottom: 25px;
+        @include media(minS) {
+            font-size: 2rem;
+        }
+        @include media(minS) {
+            font-size: $font8;
+        }
+        @include media(minL) {
+            font-size: 2.3rem;
+        }
+    }
+}
+
+.works-page {
+    .slide {
+        display: flex;
+        position: relative;
+        @include media(maxM) {
+            flex-direction: column;
+        }
+        &-content {
+            color: $colorb1;
+            padding: 35px 25px 55px 25px;
+            @include media(minM) {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+                top: 0;
+                bottom: 0;
+                padding: 0 5% 0 0;
+            }
+        }
+        &-info {
+            @include media(minM) {
+                width: 80%;
+            }
+        }
+        &-image {
+            width: 50%;
+            background-position: center;
+            background-size: cover;
+            @include media(maxM) {
+                height: 250px;
+                width: 100%;
+            }
+        }
+    }
+}

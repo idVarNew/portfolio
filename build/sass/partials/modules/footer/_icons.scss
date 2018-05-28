@@ -1,0 +1,19 @@
+.social-link {
+    transition: all 0.1s;
+    margin-left: 15px;
+    position: relative;
+    z-index: 1;
+    @include media(minM) {
+        .social-icon {
+            transition: all 0.1s;
+            transform: translate(10px, 7px) rotate(90deg) scale(1);
+            transform-origin: center center;
+            &:hover {
+
+                g {
+                    fill: $colorc1;
+                }
+            }
+        }
+    }
+}

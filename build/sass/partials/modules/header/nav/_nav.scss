@@ -1,0 +1,82 @@
+@import "navList";
+@import "navButton";
+.nav-bar {
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(12, 12, 12, 0.7);
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    &.is-open {
+        animation: openNav 0.5s 1 both;
+        li {
+            color: $colorb2;
+            @for $i from 5 to 1 {
+                &:nth-of-type(#{$i}) {
+                    animation: animateMore1 #{$i/ 10}s both;
+                }
+            }
+        }
+    }
+    &.is-closed {
+        display: none;
+        animation-name: closeNav;
+        animation-duration: 0.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+        li {
+            color: $colorb2;
+            @for $i from 1 to 7 {
+                &:nth-of-type(#{$i}) {
+                    animation: animateMore2 #{$i/ 10}s both;
+                }
+            }
+       
+        }
+    }
+}
+
+@keyframes animateMore2 {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110px);
+        opacity: 0;
+    }
+}
+
+@keyframes animateMore1 {
+    0% {
+        transform: translateY(-110px);
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes openNav  {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+/*
+@keyframes openNav {
+    @include animateVisibility (0, 1);
+}
+*/
+@keyframes closeNav {
+    @include animateVisibility (1, 0);
+}

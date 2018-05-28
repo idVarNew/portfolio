@@ -1,0 +1,53 @@
+.loaded {
+    .blank-slide {
+        animation: animateBlankSlide 1.5s 1 both;
+    }
+}
+.works-page {
+    .blank-slide {
+        animation: animateBlankSlide 1.5s 1 both;
+    }
+}
+.about-page {
+    .blank-slide {
+        animation: animateBlankSlide 1.5s 1 both;
+    }
+}
+
+.blank-slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: $colorb2;
+    z-index: 80;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-page {
+    .blank-slide {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: $colorb2;
+        z-index: 80;
+        top: 0;
+        animation-name: animateAboutslide10;
+        animation-delay: 0s;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+    }
+}
+
+
+
+@keyframes animateBlankSlide {
+    @include animateHorizontal (0px, auto, 100%)
+}
+
+@keyframes animateAboutslide10 {
+    @include animateHorizontal (0px, -58%, -100%)
+}

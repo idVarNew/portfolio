@@ -1,0 +1,91 @@
+.btn {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.sq-button {
+    @include formatText($font0, 400, uppercase, 1.5);
+    border: 1px solid $colorb1;
+    padding: 10px 35px;
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 5px;
+    position: relative;
+    @include media(minM) {
+        padding: 10px 55px;
+    }
+    span {
+        z-index: 1;
+        position: relative;
+    }
+    &::after {
+        @include pseudoLine(0%, 0%, $colorc1, block);
+        top: 0;
+        left: 0;
+        transition: all 0.2s;
+    }
+    &:hover {
+        span {
+            color: $colorb2;
+        }
+        &::after {
+            height: 100%;
+            width: 100%;
+            transition: all 0.2s
+        }
+        border: 1px solid $colorc1;
+    }
+}
+
+
+.btn-more {
+    @include formatText($font1, bold, uppercase, 1);
+    display: block;
+    clear: both;
+    margin-top: 25px;
+    position: relative;
+  
+    color: $colorb2;
+    &::after {
+        @include pseudoLine(70px, 1, $colorb2, inline-block);
+        transform: translate(8px, 7px);
+    }
+    &:hover {
+        color: $colorb2;
+        opacity: 0.8;
+        transition: all 0.2s;    
+
+        &::after {
+            content: "";
+            width: 0px;
+            background-color: $colorb2;
+            transition: all 0.5s;
+        }
+    }
+}
+
+.btn-1 {
+    @include formatText($font1, bold, uppercase, 1);
+    display: block;
+    clear: both;
+    margin-top: 15px;
+    cursor: pointer;
+    padding: 10px 5px 10px 0;
+    &::after {
+        @include pseudoLine(70px, 1, $colorb1, inline-block);
+        transform: translate(8px, 7px);
+        transition: all 0.2s;
+    }
+    &:hover {
+        color: $colorc1;
+        transition: all 0.2s;
+        &::after {
+            content: "";
+            width: 0px;
+            background-color: $colorc2;
+            transition: all 0.5s;
+        }
+    }
+}

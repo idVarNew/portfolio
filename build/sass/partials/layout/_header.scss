@@ -1,34 +1,26 @@
-.main-header {
-    position: absolute;
-    width: 100%;
-    z-index: 50;
-    padding: 35px 15px;
-    height: 20px;
-    @include media(minS) {
-        padding: 40px 0 0 30px;
-    }
-    @include media(minM) {
-        padding: 40px 25px;
-    }
-    @include media(minL) {
-        position: fixed;
-    }
 
-    &-image {
-        width: 100px;
-        @include media(minXS) {
-            width: 110px;
+.page{
+    &-header {
+        .home-link {
+            width: 190px;
+            display: inline-block;
+            @include media(minM) {
+                transform: translateX(-50px);
+            }
         }
-        @include media(minS) {
-            width: 140px;
-        }
-        @include media(minXL) {
-            width: 171px;
+        padding: 28px 17px;
+        
+        @include media(minM) {
+            padding: 50px 0;
         }
     }
-
-    &-content {
-        width: 200px;
-        overflow: hidden;
+    &-title {
+        font-size: $font9;
+        span {
+            background-color: $colorb2;
+            padding: 4px 0;
+            letter-spacing: 1.5px;
+        }
     }
+    
 }

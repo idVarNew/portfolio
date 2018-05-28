@@ -1,0 +1,23 @@
+.page-sidebar {
+    display: none;
+    &::before {
+        @include pseudoLine(100%, 1, $colorn1, block);
+        left: 0;
+    }
+
+    @include media(minM) {
+        display: block;
+        overflow: hidden;
+        min-height: 115px;
+    }
+    &-content {
+        display: flex;
+        margin: 50px;
+        @include media(minM) {
+            margin: 40px;
+        }
+        @include media(minL) {
+            margin: 50px;
+        }
+    }
+}

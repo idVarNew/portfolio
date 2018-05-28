@@ -1,0 +1,65 @@
+
+.main-skills {
+    @include formatText($font1, bold, uppercase, 1);
+    @include media(minM) {
+        display: flex;
+    }
+    &-title {
+        white-space: nowrap;
+        color: $colorc1;
+        font-weight: 500;
+        font-size: $font1;
+        padding-right: 15px;
+        &::after {
+            content: ":";
+        }
+    }
+    &-list {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        height: 15px;
+        width: 75%;
+        @include media(minXL) {
+            width: 100%;
+        }
+        overflow: hidden;
+    }
+    &-more {
+        color: $colorc1;
+        white-space: nowrap;
+        padding: 0 3px;
+        transition: all 0.3s;
+        background-color: $colorb2;
+        z-index: 1;
+        position: relative;
+        &:hover {
+            transition: all 0.3s;
+            color: $colorb1;
+        }
+        @include media(minL) {
+            padding: 0 5px;
+        }
+        @include media(minXL) {
+            padding: 0 10px;
+        }
+    }
+    li {
+        font-weight: 500;
+        &::after {
+            content: ".";
+            font-size: $font5;
+            line-height: 0;
+            font-family: Georgia;
+        }
+        span {
+            padding: 0 3px;
+            @include media(minL) {
+                padding: 0 5px;
+            }
+            @include media(minXL) {
+                padding: 0 10px;
+            }
+        }
+    }
+}

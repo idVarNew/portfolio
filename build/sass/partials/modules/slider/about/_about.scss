@@ -1,0 +1,88 @@
+@import "slides";
+@include media(maxM) {
+    .about-page {
+        .slide {
+            @include media(maxM) {
+                font-size: 1.5rem;
+            }
+            &::after {
+                @include clearfix();
+            }
+        }
+        .page-content {
+            height: auto;
+        }
+        .page-main {
+            height: auto;
+        }
+        p {
+            padding-bottom: 15px;
+        }
+        .tns-slider {
+            display: flex;
+            align-items: stretch;
+            height: 100%;
+            transition: all 0s;
+            &>.tns-item {
+                box-sizing: border-box;
+                flex: 1;
+                color: $colorb1;
+            }
+        }
+    }
+}
+
+.about-page {
+    .slide {
+        display: flex;
+        position: relative;
+        @include media(maxM) {
+            flex-direction: column;
+        }
+        &-content {
+            color: $colorb1;
+            padding: 35px 25px 55px 25px;
+            @include media(minM) {
+                position: absolute;
+                right: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+                top: 0;
+                bottom: 0;
+                padding: 0 5% 0 0;
+            }
+        }
+        &-info {
+            @include media(minM) {
+                width: 80%;
+            }
+        }
+        &-image {
+            background-position: center;
+            @include media(maxM) {
+                height: 250px;
+                width: 100%;
+            }
+            @include media(minM) {
+                width: 50%;
+            }
+        }
+        &-title {
+            @include formatText(2rem, 500, uppercase, 1.5);
+            line-height: 1.1;
+            padding-bottom: 25px;
+            @include media(minS) {
+                font-size: $font8;
+            }
+            @include media(minL) {
+                font-size: 2.3rem;
+                padding-bottom: 10px;
+            }
+            @include media(minM) {
+                padding-bottom: 25px;
+            }
+        }
+    }
+}
